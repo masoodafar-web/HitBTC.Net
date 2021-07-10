@@ -6,7 +6,7 @@ namespace HitBTC.Net.Communication
     public class HitResponse
     {
         [JsonProperty("jsonrpc")]
-        public string JsonRpc { get; private set; }
+        public string JsonRpc { get; set; }
 
         [JsonProperty("error")]
         public HitError Error { get; internal set; }

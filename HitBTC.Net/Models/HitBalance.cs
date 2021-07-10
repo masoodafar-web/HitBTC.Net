@@ -8,19 +8,19 @@ namespace HitBTC.Net.Models
         /// Currency name
         /// </summary>
         [JsonProperty("currency")]
-        public string Currency { get; private set; }
+        public string Currency { get;  set; }
 
         /// <summary>
         /// Amount available for trading or transfer to main account
         /// </summary>
         [JsonProperty("available")]
-        public decimal Available { get; private set; }
+        public decimal Available { get; set; }
 
         /// <summary>
         /// Amount reserved for active orders or incomplete transfers to main account
         /// </summary>
         [JsonProperty("reserved")]
-        public decimal Reserved { get; private set; }
+        public decimal Reserved { get; set; }
 
         public override string ToString() => $"{this.Currency} | Available: {this.Available} | Reserved: {this.Reserved}";
     }

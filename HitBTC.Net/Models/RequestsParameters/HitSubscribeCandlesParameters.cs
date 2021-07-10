@@ -8,5 +8,8 @@ namespace HitBTC.Net.Models.RequestsParameters
 
         [JsonProperty("period")]
         public HitPeriod Period { get; set; }
+
+        [JsonProperty("limit")]
+        public int limit { get; set; }
     }
 }

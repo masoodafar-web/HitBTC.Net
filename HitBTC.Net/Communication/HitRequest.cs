@@ -8,13 +8,13 @@ namespace HitBTC.Net.Communication
     internal class HitRequest
     {
         [JsonProperty("method")]
-        public HitRequestMethod Method { get; private set; }
+        public HitRequestMethod Method { get; set; }
 
         [JsonProperty("id")]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
         [JsonProperty("params")]
-        public HitRequestParameters Params { get; private set; }
+        public HitRequestParameters Params { get; set; }
 
         private static long requestIdCounter;
 

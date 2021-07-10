@@ -8,18 +8,18 @@ namespace HitBTC.Net.Models
         /// Array of candles
         /// </summary>
         [JsonProperty("data")]
-        public HitCandle[] Data { get; private set; }
+        public HitCandle[] Data { get; set; }
         
         /// <summary>
         /// Candles symbol name
         /// </summary>
         [JsonProperty("symbol")]
-        public string Symbol { get; private set; }
+        public string Symbol { get; set; }
         
         /// <summary>
         /// Candles period
         /// </summary>
         [JsonProperty("period")]
-        public HitPeriod Period { get; private set; }
+        public HitPeriod Period { get; set; }
     }
 }

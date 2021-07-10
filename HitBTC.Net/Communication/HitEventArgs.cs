@@ -5,23 +5,23 @@ namespace HitBTC.Net.Communication
 {
     public class HitEventArgs : EventArgs
     {
-        public HitConnectionState ConnectionState { get; private set; }
+        public HitConnectionState ConnectionState { get; set; }
 
-        public Exception SocketError { get; private set; }
+        public Exception SocketError { get; set; }
 
-        public HitNotificationMethod NotificationMethod { get; private set; }
+        public HitNotificationMethod NotificationMethod { get; set; }
 
-        public HitTicker Ticker { get; private set; }
+        public HitTicker Ticker { get; set; }
 
-        public HitOrderBookData OrderBook { get; private set; }
+        public HitOrderBookData OrderBook { get; set; }
 
-        public HitTradesData Trades { get; private set; }
+        public HitTradesData Trades { get; set; }
 
-        public HitCandleData Candles { get; private set; }
+        public HitCandleData Candles { get; set; }
 
-        public HitOrder[] ActiveOrders { get; private set; }
+        public HitOrder[] ActiveOrders { get; set; }
 
-        public HitReport Report { get; private set; }
+        public HitReport Report { get; set; }
 
         internal HitEventArgs(HitConnectionState connectionState) => this.ConnectionState = connectionState;
 

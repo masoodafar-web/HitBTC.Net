@@ -9,37 +9,37 @@ namespace HitBTC.Net.Models
         /// Unique identifier for Order as assigned by exchange
         /// </summary>
         [JsonProperty("id")]
-        public long Id { get; private set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Unique identifier for Order as assigned by trader. Uniqueness must be guaranteed within a single trading day, including all active orders.
         /// </summary>
         [JsonProperty("clientOrderId")]
-        public string ClientOrderId { get; private set; }
+        public string ClientOrderId { get; set; }
 
         /// <summary>
         /// Trading symbol
         /// </summary>
         [JsonProperty("symbol")]
-        public string Symbol { get; private set; }
+        public string Symbol { get; set; }
 
         /// <summary>
         /// Order side (sell buy)
         /// </summary>
         [JsonProperty("side")]
-        public HitSide Side { get; private set; }
+        public HitSide Side { get;  set; }
 
         /// <summary>
         /// Order status (new, suspended, partiallyFilled, filled, canceled, expired)
         /// </summary>
         [JsonProperty("status")]
-        public HitOrderStatus Status { get; private set; }
+        public HitOrderStatus Status { get;  set; }
 
         /// <summary>
         /// Order type (limit, market, stopLimit, stopMarket)
         /// </summary>
         [JsonProperty("type")]
-        public HitOrderType OrderType { get; private set; }
+        public HitOrderType OrderType { get; set; }
 
         /// <summary>
         /// Time in force is a special instruction used when placing a trade to indicate how long an order will remain active before it is executed or expires 
@@ -50,48 +50,48 @@ namespace HitBTC.Net.Models
         /// GTD - Good till date specified in expireTime.
         /// </summary>
         [JsonProperty("timeInForce")]
-        public HitTimeInForce TimeInForce { get; private set; }
+        public HitTimeInForce TimeInForce { get; set; }
 
         /// <summary>
         /// Order quantity
         /// </summary>
         [JsonProperty("quantity")]
-        public decimal Quantity { get; private set; }
+        public decimal Quantity { get; set; }
 
         /// <summary>
         /// Order price
         /// </summary>
         [JsonProperty("price")]
-        public decimal Price { get; private set; }
+        public decimal Price { get; set; }
         
         /// <summary>
         /// Order stop price
         /// </summary>
-        [JsonProperty("stopPrice")]
-        public decimal StopPrice { get; private set; }
+        [JsonProperty("avgPrice")]
+        public decimal AvgPrice { get; set; }
 
         /// <summary>
         /// Cumulative executed quantity
         /// </summary>
         [JsonProperty("cumQuantity")]
-        public decimal CumulativeQuantity { get; private set; }
+        public decimal CumulativeQuantity { get; set; }
         
         /// <summary>
         /// Date and time when order was created
         /// </summary>
         [JsonProperty("createdAt")]
-        public DateTime CreatedAt { get; private set; }
+        public DateTime CreatedAt { get; set; }
         
         /// <summary>
         /// Last updated order date and time
         /// </summary>
         [JsonProperty("updatedAt")]
-        public DateTime UpdatedAt { get; private set; }
+        public DateTime UpdatedAt { get; set; }
         
         /// <summary>
         /// Order expire date. (use for GTD)
         /// </summary>
         [JsonProperty("expireTime")]
-        public DateTime ExpireTime { get; private set; }
+        public DateTime ExpireTime { get;set; }
     }
 }

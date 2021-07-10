@@ -46,19 +46,19 @@ namespace HitBTC.Net.Models
         /// Error code
         /// </summary>
         [JsonProperty("code")]
-        public int Code { get; private set; }
+        public int Code { get; set; }
 
         /// <summary>
         /// Error message
         /// </summary>
         [JsonProperty("message")]
-        public string Message { get; private set; }
+        public string Message { get; set; }
 
         /// <summary>
         /// Error description
         /// </summary>
         [JsonProperty("description")]
-        public string Description { get; private set; }
+        public string Description { get; set; }
 
         internal HitError()
         { }

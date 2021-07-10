@@ -9,61 +9,61 @@ namespace HitBTC.Net.Models
         /// Best ask price
         /// </summary>
         [JsonProperty("ask")]
-        public decimal? Ask { get; private set; }
+        public decimal? Ask { get; set; }
 
         /// <summary>
         /// Best bid price
         /// </summary>
         [JsonProperty("bid")]
-        public decimal? Bid { get; private set; }
+        public decimal? Bid { get; set; }
 
         /// <summary>
         /// Last trade price
         /// </summary>
         [JsonProperty("last")]
-        public decimal? Last { get; private set; }
+        public decimal? Last { get; set; }
 
         /// <summary>
         /// Last trade price 24 hours ago
         /// </summary>
         [JsonProperty("open")]
-        public decimal? Open { get; private set; }
+        public decimal? Open { get; set; }
 
         /// <summary>
         /// Lowest trade price within 24 hours
         /// </summary>
         [JsonProperty("low")]
-        public decimal? Low { get; private set; }
+        public decimal? Low { get; set; }
 
         /// <summary>
         /// Highest trade price within 24 hours
         /// </summary>
         [JsonProperty("high")]
-        public decimal? High { get; private set; }
+        public decimal? High { get; set; }
 
         /// <summary>
         /// Total trading amount within 24 hours in base currency
         /// </summary>
         [JsonProperty("volume")]
-        public decimal? Volume { get; private set; }
+        public decimal? Volume { get; set; }
 
         /// <summary>
         /// Total trading amount within 24 hours in quote currency
         /// </summary>
         [JsonProperty("volumeQuote")]
-        public decimal? VolumeQuote { get; private set; }
+        public decimal? VolumeQuote { get; set; }
 
         /// <summary>
         /// Last update or refresh ticker timestamp
         /// </summary>
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; private set; }
+        public DateTime Timestamp { get; set; }
 
         /// <summary>
         /// Symbol nam
         /// </summary>
         [JsonProperty("symbol")]
-        public string Symbol { get; private set; }
+        public string Symbol { get; set; }
 
         public override string ToString() => $"{this.Timestamp} | {this.Symbol}" +
             $"{this.AddFieldToString("Bid", this.Bid)}" +

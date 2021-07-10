@@ -9,31 +9,31 @@ namespace HitBTC.Net.Models
         /// Trade id
         /// </summary>
         [JsonProperty("id")]
-        public long Id { get; private set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Trade price
         /// </summary>
         [JsonProperty("price")]
-        public decimal Price { get; private set; }
+        public decimal Price { get; set; }
 
         /// <summary>
         /// Trade quantity
         /// </summary>
         [JsonProperty("quantity")]
-        public decimal Quantity { get; private set; }
+        public decimal Quantity { get; set; }
 
         /// <summary>
         /// Trade side sell or buy
         /// </summary>
         [JsonProperty("side")]
-        public HitSide Side { get; private set; }
+        public HitSide Side { get; set; }
 
         /// <summary>
         /// Trade timestamp
         /// </summary>
         [JsonProperty("timestamp")]
-        public DateTime Timestamp { get; private set; }
+        public DateTime Timestamp { get; set; }
 
         public override string ToString() => $"{this.Id} | {this.Timestamp} | {this.Side} | {this.Price} | {this.Quantity}";
     }

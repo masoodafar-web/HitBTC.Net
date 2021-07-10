@@ -7,10 +7,10 @@ namespace HitBTC.Net.Communication
     public class HitNotification
     {
         [JsonProperty("jsonrpc")]
-        public string JsonRpc { get; private set; }
+        public string JsonRpc { get; set; }
 
         [JsonProperty("method")]
-        public HitNotificationMethod Method { get; private set; }
+        public HitNotificationMethod Method { get; set; }
 
         internal static HitNotification TryParse(HitNotificationMethod method, JObject jObject)
         {
@@ -42,7 +42,7 @@ namespace HitBTC.Net.Communication
     public class HitNotification<T> : HitNotification
     {
         [JsonProperty("params")]
-        public T Params { get; private set; }
+        public T Params { get; set; }
 
         public override string ToString() => $"{base.ToString()} | {this.Params}";
     }

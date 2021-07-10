@@ -292,12 +292,13 @@ namespace HitBTC.Net
             return await this.MakeRequestAsync<bool>(request, cancellationToken);
         }
 
-        public async Task<HitResponse<bool>> SubscribeCandlesAsync(string symbol, HitPeriod period, CancellationToken cancellationToken = default)
+        public async Task<HitResponse<bool>> SubscribeCandlesAsync(string symbol, HitPeriod period,int limit, CancellationToken cancellationToken = default)
         {
             var parameters = new HitSubscribeCandlesParameters()
             {
                 Symbol = symbol,
-                Period = period
+                Period = period,
+                limit= limit
             };
 
             var request = new HitRequest(parameters);
@@ -384,17 +385,17 @@ namespace HitBTC.Net
         /// <param name="strictValidate">Price and quantity will be checked that they increment within tick size and quantity step. See symbol tickSize and quantityIncrement</param>
         /// <param name="cancellationToken">Token for cancel operation</param>
         /// <returns></returns>
-        public async Task<HitResponse<HitReport>> PlaceNewOrderAsync(string symbol, HitSide side, decimal quantity, decimal price = -1, decimal stopPrice = -1,
+        public async Task<HitResponse<HitReport>> PlaceNewOrderAsync(string symbol, HitSide side, HitOrderType type, decimal quantity, decimal price = -1, decimal stopPrice = -1,
             HitTimeInForce timeInForce = HitTimeInForce.Day, DateTime expireTime = default, string clientOrderId = null, bool strictValidate = true, CancellationToken cancellationToken = default)
         {
-            HitOrderType orderType = HitOrderType.Market;
+            //HitOrderType orderType = HitOrderType.Market;
 
-            if (price != -1 && stopPrice == -1)
-                orderType = HitOrderType.Limit;
-            else if (price == -1 && stopPrice != -1)
-                orderType = HitOrderType.StopMarket;
-            else if (price != -1 && stopPrice != -1)
-                orderType = HitOrderType.StopLimit;
+            //if (price != -1 && stopPrice == -1)
+            //    orderType = HitOrderType.Limit;
+            //else if (price == -1 && stopPrice != -1)
+            //    orderType = HitOrderType.StopMarket;
+            //else if (price != -1 && stopPrice != -1)
+            //    orderType = HitOrderType.StopLimit;
 
             if (clientOrderId == null)
                 clientOrderId = GenerateId();
@@ -404,7 +405,7 @@ namespace HitBTC.Net
                 ClientOrderId = clientOrderId,
                 Symbol = symbol,
                 Side = side,
-                OrderType = orderType,
+                OrderType = type,
                 TimeInForce = timeInForce,
                 Quantity = quantity,
                 Price = price,

@@ -8,12 +8,12 @@ namespace HitBTC.Net.Models
         /// Address for deposit
         /// </summary>
         [JsonProperty("address")]
-        public string Address { get; private set; }
+        public string Address { get; set; }
 
         /// <summary>
         /// Optional additional parameter. Required for deposit if persist
         /// </summary>
         [JsonProperty("paymentId")]
-        public string PaymentId { get; private set; }
+        public string PaymentId { get; set; }
     }
 }

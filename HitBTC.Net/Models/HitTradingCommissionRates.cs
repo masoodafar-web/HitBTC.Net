@@ -8,12 +8,12 @@ namespace HitBTC.Net.Models
         /// Take liquidity rate
         /// </summary>
         [JsonProperty("takeLiquidityRate")]
-        public decimal TakeLiquidityRate { get; private set; }
+        public decimal TakeLiquidityRate { get; set; }
         
         /// <summary>
         /// Provide liquidity rate
         /// </summary>
         [JsonProperty("provideLiquidityRate")]
-        public decimal ProvideLiquidityRate { get; private set; }
+        public decimal ProvideLiquidityRate { get; set; }
     }
 }

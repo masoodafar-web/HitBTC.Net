@@ -8,13 +8,13 @@ namespace HitBTC.Net.Models
         /// Level price
         /// </summary>
         [JsonProperty("price")]
-        public decimal Price { get; private set; }
+        public decimal Price { get; set; }
 
         /// <summary>
         /// Level size
         /// </summary>
         [JsonProperty("size")]
-        public decimal Size { get; private set; }
+        public decimal Size { get; set; }
 
         public override string ToString() => $"Price: {this.Price} | Size: {this.Size}";
     }

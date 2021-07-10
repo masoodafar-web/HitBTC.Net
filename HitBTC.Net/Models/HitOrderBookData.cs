@@ -8,12 +8,12 @@ namespace HitBTC.Net.Models
         /// Symbol name
         /// </summary>
         [JsonProperty("symbol")]
-        public string Symbol { get; private set; }
+        public string Symbol { get; set; }
 
         /// <summary>
         /// Sequence is monotone increasing for each update, each symbol has its own sequence
         /// </summary>
         [JsonProperty("sequence")]
-        public long Sequence { get; private set; }
+        public long Sequence { get; set; }
     }
 }
